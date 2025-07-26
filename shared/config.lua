@@ -18,31 +18,30 @@ end
 
 Config.garages = {
     ['fermier'] = {
-        {
-            filter = "helicopter",
-            position = vec4(-334.9104, -260.9521, 43.2367, 232.0862),
-            spawn = vec4(-326.7565, -270.8874, 43.1414, 235.2273),
-            ped = "s_m_y_cop_01",
-        },
+        -- { POUR EXEMPLE
+        --     filter = "helicopter",
+        --     position = vec4(-334.9104, -260.9521, 43.2367, 232.0862),
+        --     spawn = vec4(-326.7565, -270.8874, 43.1414, 235.2273),
+        --     ped = "s_m_y_cop_01",
+        -- },
         {
             filter = "car",
-            position = vec4(-327.9296, -267.2944, 28.0673, 136.1363),
-            spawn = vec4(-321.0579, -268.0261, 27.4253, 143.6510),
+            position = vec4(-28.8285, -1157.2192, 26.8673, 3.7609),
+            spawn = vec4(-32.8310, -1148.9210, 26.5033, 92.3379),
             ped = "s_m_y_dockwork_01",
         },
     },
 }
 
 Config.Shop = {
-    location = vec4(558.9724, -252.4192, 49.9806, 40.2113),
+    location = vec4(-56.7076, -1098.6287, 26.4224, 31.7129),
     ped = "s_m_y_casino_01",
-    spawn = vec4(545.7001, -277.5385, 49.6311, 19.8302),
+    spawn = vec4(-12.3505, -1083.3850, 26.6721, 245.4047),
     vehicles = {
         ['fermier'] = {
-            {label = "Police 1", model = "police", price = 70000, type = "car"},
-            {label = "Police 2", model = "police2", price = 20000, type = "car"},
-            {label = "Bus police", model = "pbus", price = 20000, type = "car"},
-            {label = "Hélicoptere", model = "polmav", price = 500000, type = "helicopter"},
+            {label = "Burrito", model = "burrito", price = 500, type = "car"},
+            {label = "Burrito2", model = "burrito2", price = 20000, type = "car"},
+            {label = "Hélicoptere", model = "polmav", price = 200, type = "helicopter"},
         },
     }
 }
