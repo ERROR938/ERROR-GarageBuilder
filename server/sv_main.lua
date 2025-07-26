@@ -62,5 +62,9 @@ end)
 
 RegisterNetEvent("ERROR-GarageBuilder:Server:SetVehicleState", function(plate, state, mods)
     local xPlayer = ESX.GetPlayerFromId(source)
-    MySQL.query("UPDATE owned_vehicles SET stored = ?, vehicle = ? WHERE job = ? and plate = ?", {state, json.encode(mods), xPlayer.getJob().name, plate})
+    if (not mods) then
+        MySQL.query("UPDATE owned_vehicles SET stored = ? WHERE job = ? and plate = ?", {state, xPlayer.getJob().name, plate})
+    else
+        MySQL.query("UPDATE owned_vehicles SET stored = ?, vehicle = ? WHERE job = ? and plate = ?", {state, json.encode(mods), xPlayer.getJob().name, plate})
+    end
 end)
