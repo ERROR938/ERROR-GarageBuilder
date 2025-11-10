@@ -45,7 +45,7 @@ end)
 
 RegisterNetEvent("ERROR-GarageBuilder:Server:SaveVehicle", function(job, mods, cartype)
     local xPlayer = ESX.GetPlayerFromId(source)
-    MySQL.query("INSERT INTO owned_vehicles (job, plate, vehicle, type) VALUES (?, ?, ?, ?)", {job, mods.plate, json.encode(mods), cartype})
+    MySQL.query("INSERT INTO owned_vehicles (owner, job, plate, vehicle, type) VALUES (?, ?, ?, ?, ?)", {job, job, mods.plate, json.encode(mods), cartype})
     xPlayer.showNotification("Le véhicule appartient désormais à la société", "success")
 end)
 
